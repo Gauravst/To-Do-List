@@ -18,6 +18,7 @@ export default function Footer() {
             src="/icon.svg"
             width="30"
             height="30"
+						alt="logo"
           />
           To Do
         </h4>

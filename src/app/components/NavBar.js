@@ -1,25 +1,51 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const session = useSession();
+  const [user, setUser] = useState(false);
+
+  useEffect(() => {
+    if (session?.status === "authenticated") {
+      setUser(true);
+    } else {
+      setUser(false);
+    }
+  }, [session?.status]);
   return (
     <nav className="flex gap-x-8 items-center">
       <ul className="flex gap-x-6 items-center">
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">Home</Link>
+          <Link className="font-medium text-sm text-gray-700" href="#">
+            Home
+          </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">Pricing</Link>
+          <Link className="font-medium text-sm text-gray-700" href="#">
+            Pricing
+          </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">About</Link>
+          <Link className="font-medium text-sm text-gray-700" href="#">
+            About
+          </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">Contact</Link>
+          <Link className="font-medium text-sm text-gray-700" href="#">
+            Contact
+          </Link>
         </li>
       </ul>
       <div className="bg-black h-10 px-3 flex items-center rounded-md cursor-pointer hover:bg-opacity-60">
-        <Link className="text-white text-sm font-medium" href="/dashboard">DashBoard</Link>
+        <Link
+          className="text-white text-sm font-medium"
+          href={user ? "/dashboard" : "/login"}
+        >
+          {user ? "Dashboard" : "Get Started"}
+        </Link>
       </div>
     </nav>
   );

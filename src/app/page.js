@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useSession } from "next-auth/next";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="bg-transparent h-12 mt-5 w-fit px-4 flex items-center rounded-md cursor-pointer transition duration-500 hover:bg-gray-200 border border-gray-400">
-            <Link className="text-gray-950 text-sm font-medium" href="#">
+            <Link className="text-gray-950 text-sm font-medium" href="/">
               Learn More
             </Link>
           </div>
