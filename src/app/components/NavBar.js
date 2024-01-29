@@ -19,7 +19,7 @@ export default function NavBar() {
         </li>
       </ul>
       <div className="bg-black h-10 px-3 flex items-center rounded-md cursor-pointer hover:bg-opacity-60">
-        <Link className="text-white text-sm font-medium" href="#">DashBoard</Link>
+        <Link className="text-white text-sm font-medium" href="/dashboard">DashBoard</Link>
       </div>
     </nav>
   );

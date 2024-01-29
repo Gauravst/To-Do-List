@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const pop = Inter({ subsets: ["latin"]});
+const pop = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "To Do",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={pop.className}>
         <Header />
         {children}
-				<Footer />
+        <Footer />
       </body>
     </html>
   );
