@@ -19,22 +19,22 @@ export default function NavBar() {
     <nav className="flex gap-x-8 items-center">
       <ul className="flex gap-x-6 items-center">
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">
+          <Link className="font-medium text-sm text-gray-700" href="#home">
             Home
           </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">
+          <Link className="font-medium text-sm text-gray-700" href="#pricing">
             Pricing
           </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">
+          <Link className="font-medium text-sm text-gray-700" href="#about">
             About
           </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#">
+          <Link className="font-medium text-sm text-gray-700" href="#contact">
             Contact
           </Link>
         </li>
