@@ -3,7 +3,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="h-[90vh] w-[80vw]">
+    <div className="min-h-[100vh] w-[80vw]">
       <Dash />
     </div>
   );

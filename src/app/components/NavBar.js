@@ -19,12 +19,12 @@ export default function NavBar() {
     <nav className="flex gap-x-8 items-center">
       <ul className="flex gap-x-6 items-center">
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#home">
+          <Link className="font-medium text-sm text-gray-700" href="/#home">
             Home
           </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#pricing">
+          <Link className="font-medium text-sm text-gray-700" href="/#pricing">
             Pricing
           </Link>
         </li>
@@ -34,7 +34,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link className="font-medium text-sm text-gray-700" href="#contact">
+          <Link className="font-medium text-sm text-gray-700" href="/#contact">
             Contact
           </Link>
         </li>
